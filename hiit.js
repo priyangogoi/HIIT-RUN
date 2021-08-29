@@ -5,23 +5,13 @@ const resume= document.querySelector("#resumeButton");
         e.preventDefault();
         workout(); 
         function workout(){
-            setTimeout(alertFunc, hiit_Time*60000);
-         }
-        function alertFunc(){
-            if(confirm("Take break")){
-              setTimeout(function(){
-                  if(confirm("Continue HIIT")){
-                      workout();
-                  }
-                  else{
-                    alert("Ending session...");
+            setTimeout(function alertFunc(){ 
+                if(confirm("Choose ?")){
+                    alert("Yes");
+                     }
+                else{
+                    alert("No");
                 }
-              }, hiit_break*60000);
-           }
-         else{
-             workout();
-         }
-          
-        }   
-    });
-       
+    }, hiit_Time*60000);
+         
+     
